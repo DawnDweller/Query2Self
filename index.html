@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <h1>Personality Quiz</h1>
+        <p class="app__subtitle">There are 4 main and 16 sub personalities. Answer the questions to find out which type you are.</p>
+      </header>
+
+      <main class="app__main">
+        <section id="quiz-screen" class="card">
+          <div class="quiz-layout">
+            <div class="quiz-main">
+              <div id="question-meta" class="question-meta">
+                <span id="question-counter">Question 1 / 10</span>
+              </div>
+
+              <h2 id="question-text" class="question-text"></h2>
+
+              <ul id="answers-list" class="answers-list"></ul>
+
+              <div class="navigation">
+                <button id="next-btn" class="btn btn--primary" disabled>
+                  Next
+                </button>
+              </div>
+
+              <div id="feedback" class="feedback" aria-live="polite"></div>
+            </div>
+
+            <aside class="quiz-image-panel">
+              <div class="quiz-image-wrapper">
+                <img
+                  id="question-image"
+                  class="quiz-image"
+                  src="images/questions/default.png"
+                  alt="Question illustration"
+                />
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="result-screen" class="card card--hidden">
+          <h2>Your Personality Type</h2>
+          <p id="score-text" class="score-text"></p>
+
+          <div class="personality-type">
+            <span id="type-code" class="type-code"></span>
+            <span id="type-name" class="type-name"></span>
+          </div>
+
+          <img
+            id="type-image"
+            class="type-image"
+            src="images/types/default.png"
+            alt="Personality type illustration"
+          />
+
+          <p id="type-description" class="type-description"></p>
+
+          <div class="chart-container">
+            <canvas id="result-chart" width="320" height="220"></canvas>
+          </div>
+
+          <ul class="result-summary">
+            <li><span>Extraversion (E):</span> <span id="summary-e">0</span></li>
+            <li><span>Introversion (I):</span> <span id="summary-i">0</span></li>
+            <li><span>Sensing (S):</span> <span id="summary-s">0</span></li>
+            <li><span>Intuition (N):</span> <span id="summary-n">0</span></li>
+            <li><span>Thinking (T):</span> <span id="summary-t">0</span></li>
+            <li><span>Feeling (F):</span> <span id="summary-f">0</span></li>
+            <li><span>Judging (J):</span> <span id="summary-j">0</span></li>
+            <li><span>Perceiving (P):</span> <span id="summary-p">0</span></li>
+          </ul>
+
+          <button id="restart-btn" class="btn btn--secondary">
+            Restart Quiz
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
