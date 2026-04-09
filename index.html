@@ -9,8 +9,20 @@
   <body>
     <div class="app">
       <header class="app__header">
-        <h1>Personality Quiz</h1>
-        <p class="app__subtitle">There are 4 main and 16 sub personalities. Answer the questions to find out which type you are.</p>
+        <div class="header-top">
+          <h1 id="app-title">Personality Quiz</h1>
+          <div class="language-switcher">
+            <label for="language-select" class="language-label">Language:</label>
+            <select id="language-select" class="language-select" aria-label="Language selection">
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+        </div>
+        <p id="app-subtitle" class="app__subtitle">
+          There are 4 main and 16 sub personalities. Answer the questions to find out which type you are.
+        </p>
       </header>
 
       <main class="app__main">
